@@ -4,19 +4,11 @@
 
 VaListener::VaListener()
 {
-	this->onError = DefaultErrorCallback();
-	this->onSuccess = DefaultSuccessCallback();
+	this->onError = DefaultCallback();
+	this->onSuccess = DefaultCallback();
 }
 
-OnErrorCallback VaListener::DefaultErrorCallback()
-{
-	return [](int code, const char* msg)
-	{
-		std::cout << code << " : " << msg << std::endl;
-	};
-}
-
-OnSuccessCallback VaListener::DefaultSuccessCallback()
+OnErrorCallback VaListener::DefaultCallback()
 {
 	return [](int code, const char* msg)
 	{

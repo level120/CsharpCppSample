@@ -36,10 +36,10 @@ namespace CsharpManaged
             OnErrorCallback errorCallback, OnSuccessCallback successCallback);
 
         public static void OnError(int errCode, string errText) =>
-            Console.WriteLine($"!!!!!!!!!!!!!!!!!!! OnError {errText}");
+            Console.WriteLine($"!!!!!!!!!!!!!!!!!!! OnError, {errCode} : {errText}");
 
         public static void OnSuccess(int id, string keyword) =>
-            Console.WriteLine($"############## OnSuccess {keyword}");
+            Console.WriteLine($"############## OnSuccess, {id} : {keyword}");
     }
 
     #endregion C++ DLL과 상호작용할 영역 종료

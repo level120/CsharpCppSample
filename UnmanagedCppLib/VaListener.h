@@ -10,6 +10,5 @@ public:
 	OnErrorCallback onError;
 	OnSuccessCallback onSuccess;
 
-	static OnErrorCallback DefaultErrorCallback();
-	static OnSuccessCallback DefaultSuccessCallback();
+	static OnErrorCallback DefaultCallback();
 };

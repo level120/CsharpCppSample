@@ -16,8 +16,8 @@ __declspec(dllexport) void __stdcall SetCallback(
 	test->onSuccess = successCallback;
 
 	// call
-	test->onError(-1, "error");
-	test->onSuccess(0, "success");
+	test->onError(-100, "error");
+	test->onSuccess(100, "success");
 
 	delete test;
 }
